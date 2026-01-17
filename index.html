@@ -2,18 +2,207 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My GitHub Website</title>
+  <title>GCC SWE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
+    :root {
+      --swe-purple: #6a0dad;
+      --light-purple: #f3e9fb;
+      --dark-purple: #4b0b82;
+    }
+
     body {
-      font-family: Arial, sans-serif;
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background-color: #ffffff;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* NAV BAR */
+    nav {
+      background-color: var(--swe-purple);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav h1 {
+      color: white;
+      margin: 0;
+      font-size: 22px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section h2 {
+      color: var(--swe-purple);
+      margin-bottom: 15px;
+      font-size: 28px;
+    }
+
+    /* HERO */
+    .hero {
+      background-color: var(--light-purple);
       text-align: center;
-      padding: 50px;
-      background-color: #f4f4f4;
+      padding: 80px 20px;
+    }
+
+    .hero h2 {
+      font-size: 36px;
+    }
+
+    /* OFFICERS */
+    .officers {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      padding: 20px;
+      text-align: center;
+    }
+
+    .card h3 {
+      margin-bottom: 5px;
+      color: var(--dark-purple);
+    }
+
+    /* EVENTS */
+    .event {
+      background-color: var(--light-purple);
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    /* CONTACT */
+    .contact {
+      text-align: center;
+    }
+
+    footer {
+      background-color: var(--swe-purple);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
     }
   </style>
 </head>
+
 <body>
-  <h1>Hello World 👋</h1>
-  <p>This is my first GitHub website!</p>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <h1>GCC SWE 💜</h1>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#officers">Officers</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <h2>Society of Women Engineers</h2>
+    <p>Glendale Community College Chapter</p>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>
+      The Society of Women Engineers (SWE) at Glendale Community College is dedicated to empowering
+      women and allies in engineering, technology, and STEM. We provide professional development,
+      mentorship, networking opportunities, and community outreach to support our members’ success.
+    </p>
+  </section>
+
+  <!-- OFFICERS -->
+  <section id="officers">
+    <h2>Our Officers</h2>
+    <div class="officers">
+      <div class="card">
+        <h3>President</h3>
+        <p>Your Name</p>
+      </div>
+      <div class="card">
+        <h3>Vice President</h3>
+        <p>Name</p>
+      </div>
+      <div class="card">
+        <h3>Secretary</h3>
+        <p>Name</p>
+      </div>
+      <div class="card">
+        <h3>Treasurer</h3>
+        <p>Name</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTS -->
+  <section id="events">
+    <h2>Events</h2>
+    <div class="event">
+      <strong>📌 First General Meeting</strong>
+      <p>Welcome event for new members + SWE overview.</p>
+    </div>
+    <div class="event">
+      <strong>💼 Resume & LinkedIn Workshop</strong>
+      <p>Professional development session with industry tips.</p>
+    </div>
+    <div class="event">
+      <strong>🤝 Networking Night</strong>
+      <p>Meet engineers and SWE alumni.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Email: <strong>gcc.swe@email.com</strong></p>
+    <p>Instagram: <strong>@gcc.swe</strong></p>
+  </section>
+
+  <footer>
+    <p>© 2026 GCC Society of Women Engineers</p>
+  </footer>
+
 </body>
 </html>
